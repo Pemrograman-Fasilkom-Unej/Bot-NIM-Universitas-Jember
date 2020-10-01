@@ -1,0 +1,26 @@
+{
+  "name": "Bot-NIM-Universitas-Jember",
+  "version": "1.0.0",
+  "description": "Telegram BOT untuk mencari identitas mahasiswa Universitas Jember",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "unej"
+  ],
+  "author": "Pemrograman Fasilkom Universitas Jember",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.21.6",
+    "mysql": "^2.18.1",
+    "node-telegram-bot-api": "^0.50.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
