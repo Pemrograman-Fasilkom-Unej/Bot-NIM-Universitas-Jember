@@ -1,6 +1,7 @@
 // database config is depend on node environment
 // configs can be found on ~/knexfile.js
-const environment = process.env.NODE_ENV;
-const config = require('../../knexfile')[environment];
+const path = require('path');
+const environment = process.env.NODE_ENV || 'development'; // todo : delete this shit
+const config = require(path.resolve(__dirname, '../../knexfile'))[environment];
 
 module.exports = require('knex')(config);

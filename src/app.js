@@ -19,7 +19,8 @@ const {
     aboutCommand,
     helpCommand,
     startCommand,
-    findCommand
+    findCommand,
+    configCommand
 } = require('./commands');
 
 
@@ -55,6 +56,7 @@ bot.start(startCommand())
 bot.help(helpCommand())
 bot.command('about', aboutCommand())
 bot.command('find', findCommand())
+bot.command('config', configCommand())
 
 
 /**
