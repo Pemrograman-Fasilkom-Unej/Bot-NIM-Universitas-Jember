@@ -1,8 +1,8 @@
-require('./utils/consoleTimestamp')();
+// require('./utils/consoleTimestamp')();
 
 const Telegraf  = require('telegraf')
 const rateLimit = require('telegraf-ratelimit')
-const { isDevelopment } = require('./utils/isDevelopment');
+const { isDevelopment } = require('./utils');
 const { rateLimitConfig } = require('./configs/rate-limit')
 
 const {
@@ -19,6 +19,7 @@ const {
     aboutCommand,
     helpCommand,
     startCommand,
+    findCommand
 } = require('./commands');
 
 
@@ -53,6 +54,7 @@ if (isDevelopment()) {
 bot.start(startCommand())
 bot.help(helpCommand())
 bot.command('about', aboutCommand())
+bot.command('find', findCommand())
 
 
 /**
@@ -67,6 +69,7 @@ if (isDevelopment()) {
     if (typeof WEBHOOK_PATH != 'undefined')
         bot.webhookCallback(WEBHOOK_PATH);
 
+    console.log(process.env.NODE_ENV);
     bot.launch({
         webhook: {
             domain: WEBHOOK_DOMAIN,

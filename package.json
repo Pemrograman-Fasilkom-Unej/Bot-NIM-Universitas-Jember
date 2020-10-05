@@ -20,6 +20,7 @@
     "localtunnel": "^2.0.0",
     "mysql": "^2.18.1",
     "node-telegram-bot-api": "^0.50.0",
+    "redis": "^3.0.2",
     "telegraf": "^3.38.0",
     "telegraf-ratelimit": "^2.0.0"
   },
