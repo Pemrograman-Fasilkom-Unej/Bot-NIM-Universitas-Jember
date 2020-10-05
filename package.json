@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "docker:build": "docker build -t bot-nim-unej:latest .",
+    "docker:login": "docker login",
+    "docker:push": "docker push pemro/bot_nim",
     "test": "jest --detectOpenHandles --forceExit --maxWorkers=5"
   },
   "keywords": [
@@ -20,7 +23,9 @@
     "localtunnel": "^2.0.0",
     "mysql": "^2.18.1",
     "node-telegram-bot-api": "^0.50.0",
+    "redis": "^3.0.2",
     "telegraf": "^3.38.0",
+    "telegraf-inline-menu": "^5.2.1",
     "telegraf-ratelimit": "^2.0.0"
   },
   "devDependencies": {

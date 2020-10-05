@@ -1,10 +1,7 @@
-const developmentEnvironments = [
-    'local',
-    'development'
-]
+const { isDevelopment } = require('./src/utils');
 
-if (developmentEnvironments.includes(process.env.NODE_ENV)){
+if (isDevelopment()){
     require('dotenv').config();
 }
 
-const app = require('./src/app');
+require('./src/app');
