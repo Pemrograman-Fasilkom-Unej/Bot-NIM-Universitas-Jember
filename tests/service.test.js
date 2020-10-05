@@ -33,3 +33,27 @@ describe("Testing searching data", () => {
         await db.migrate.down();
     });
 })
+
+// describe("Testing redis service", () => {
+//     test("Test redis data input", () => {
+//         BotService.saveUserCommand({
+//             message_id: 6,
+//             from: {
+//               id: 494236242,
+//               is_bot: false,
+//               first_name: 'yyy',
+//               username: 'miqdadyyy',
+//               language_code: 'en'
+//             },
+//             chat: {
+//               id: 494236242,
+//               first_name: 'yyy',
+//               username: 'miqdadyyy',
+//               type: 'private'
+//             },
+//             date: 1601905731,
+//             text: '/find 12',
+//             entities: [ { offset: 0, length: 5, type: 'bot_command' } ]
+//           });
+//     });
+// });

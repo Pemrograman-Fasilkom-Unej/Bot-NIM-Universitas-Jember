@@ -1,7 +1,6 @@
-require('./utils/consoleTimestamp')();
-
 const bot = require('./bot')
-const { isDevelopment } = require('./utils/isDevelopment');
+const { isDevelopment } = require('./utils');
+
 const {
     WEBHOOK_DOMAIN,
     WEBHOOK_PATH,
@@ -24,7 +23,7 @@ if (isDevelopment()) {
         }
     }
 
-    if (typeof WEBHOOK_PATH !== 'undefined' && WEBHOOK_PATH !== '') launchOptions['webhook']['hookPath'] = WEBHOOK_PATH
+    if (typeof WEBHOOK_PATH === 'string' && WEBHOOK_PATH.startsWith('/')) launchOptions['webhook']['hookPath'] = WEBHOOK_PATH
 
     bot.launch(launchOptions);
 }

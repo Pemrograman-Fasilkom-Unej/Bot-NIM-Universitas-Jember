@@ -1,6 +1,6 @@
-if (['local', 'development'].includes(process.env.NODE_ENV)){
-    require('dotenv').config();
-} else {
+const { isDevelopment } = require('./utils');
+
+if (!isDevelopment()){
     console.error('Run only on development!');
     process.exit(0);
 }

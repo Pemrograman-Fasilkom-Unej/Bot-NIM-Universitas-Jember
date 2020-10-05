@@ -2,7 +2,7 @@
 const Telegraf  = require('telegraf')
 const rateLimit = require('telegraf-ratelimit')
 const { rateLimitConfig }   = require('./configs/rate-limit')
-const { isDevelopment }     = require('./utils/isDevelopment');
+const { isDevelopment }     = require('./utils/');
 const {
     BOT_TOKEN,
     BOT_NAME,
@@ -16,6 +16,7 @@ const {
     aboutCommand,
     helpCommand,
     startCommand,
+    findCommand,
 } = require('./commands');
 
 
@@ -49,6 +50,7 @@ if (isDevelopment()) {
 bot.start(startCommand())
 bot.help(helpCommand())
 bot.command('about', aboutCommand())
+bot.command('find', findCommand())
 
 
 module.exports = bot
