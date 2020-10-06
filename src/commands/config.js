@@ -13,8 +13,6 @@ module.exports = () => ctx => {
 
     mainConfigMenu.interact('Angkatan', 'angkatan', {
         do: async ctx => {
-            console.log("asu");
-            await ctx.answerCbQuery('Kontol');
             return false;
         }
     });

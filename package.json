@@ -26,7 +26,8 @@
     "redis": "^3.0.2",
     "telegraf": "^3.38.0",
     "telegraf-inline-menu": "^5.2.1",
-    "telegraf-ratelimit": "^2.0.0"
+    "telegraf-ratelimit": "^2.0.0",
+    "telegraf-test": "^1.2.1"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

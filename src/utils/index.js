@@ -18,4 +18,4 @@ function consoleTimestamp() {
 module.exports = {
     isDevelopment,
     consoleTimestamp
-};
+}
