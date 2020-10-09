@@ -33,7 +33,7 @@ const BotService = class {
     async searchStudent(message) {
         const keyword = message.text.split(' ').slice(1).join(' ').trim();
         this.saveUserMessage(message);
-        const students = await this.searchByKeyword(keyword);
+        const students = isFinite(keyword) ? await this.searchByNIM(nim) : await this.searchByKeyword(keyword);
         let response = '';
         if (students.length > 0) {
             students.forEach((student, index) => {
